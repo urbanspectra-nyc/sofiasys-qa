@@ -13,5 +13,6 @@ specs:
 tags:
     - Space Gray
     - Used
+    - 15 inch
 ---
 Awesome description goes here

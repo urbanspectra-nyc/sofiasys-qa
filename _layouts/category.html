@@ -3,11 +3,11 @@ layout: default
 ---
 
 <div class="container">
-  <div class="row py-4">
+  <div class="row py-4 border-bottom">
     <div class="col">
       <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="/">Home</a></li>
+          <li class="breadcrumb-item"><a href="{{ '/' | relative_path }}">Home</a></li>
           <li class="breadcrumb-item"><a href="/products">Products</a></li>
           <li class="breadcrumb-item active" aria-current="page">
             {{page.title}}
@@ -16,12 +16,109 @@ layout: default
       </nav>
     </div>
   </div>
-  <div class="row mb-5">
+  <div class="row mb-2 py-4">
     <div class="col">
-      <div class="h3 fw-bold text-muted">{{page.description}}</div>
+      <div class="h1 fw-bold text-muted">
+        {{page.title}}
+      </div>
+      <div class="fs-5">{{content}}</div>
     </div>
   </div>
-  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 mb-5">
+  <div class="row">
+    <div class="col">
+      <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
+        <li class="nav-item" role="presentation">
+          <button class="nav-link active" id="pills-all-tab" data-bs-toggle="pill" data-bs-target="#pills-all"
+            type="button" role="tab" aria-controls="pills-all" aria-selected="true">All</button>
+        </li>
+        {% for filter in page.filters %}
+        <li class="nav-item" role="presentation">
+          <button class="nav-link" id="pills-{{filter | replace: ' ','-'}}-tab" data-bs-toggle="pill"
+            data-bs-target="#pills-{{filter | replace: ' ','-'}}" type="button" role="tab"
+            aria-controls="pills-{{filter | replace: ' ','-'}}" aria-selected="false">{{filter
+            |
+            capitalize}}</button>
+        </li>
+        {% endfor %}
+      </ul>
+      <div class="tab-content" id="pills-tabContent">
+        <div class="tab-pane fade show active" id="pills-all" role="tabpanel" aria-labelledby="pills-all-tab">
+          <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 mb-5">
+            {% for product in site.products %} {% if product.type == 'product' and
+            product.category == page.category %}
+            <div class="col">
+              <div class="p-5 border rounded">
+                <div class="row">
+                  <div class="col text-center">
+                    <img src="{{product.img | relative_url}}" alt="{{product.brand}} - {{product.model}}"
+                      class="img-fluid mb-3 w-75" />
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col">
+                    <div class="fs-6 text-center text-muted">From</div>
+                    <div class="fs-2 text-center fw-bold">{{product.price}}</div>
+                    <div class="fs-5 text-center mb-3">
+                      {{product.brand}} {{product.model}}
+                    </div>
+                    <div class="fs-6 text-muted">Available with</div>
+                    <ul class="text-muted mb-3">
+                      {% for spec in product.specs %}
+                      <li><small>{{spec}}</small></li>
+                      {% endfor %}
+                    </ul>
+                    <a href="{{product.url | relative_url}}"
+                      class="btn btn-primary text-uppercase fw-bold w-100">Configure</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {% endif %} {% endfor %}
+          </div>
+        </div>
+        {% for filter in page.filters %}
+        <div class="tab-pane fade" id="pills-{{filter | replace: ' ','-'}}" role="tabpanel"
+          aria-labelledby="pills-{{filter | replace: ' ','-'}}-tab">
+          <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 mb-5">
+            {% for product in site.products %} {% if product.type == 'product' and
+            product.category == page.category %}
+            {% if product.tags contains filter %}
+            <div class="col">
+              <div class="p-5 border rounded">
+                <div class="row">
+                  <div class="col text-center">
+                    <img src="{{product.img | relative_url}}" alt="{{product.brand}} - {{product.model}}"
+                      class="img-fluid mb-3 w-75" />
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col">
+                    <div class="fs-6 text-center text-muted">From</div>
+                    <div class="fs-2 text-center fw-bold">{{product.price}}</div>
+                    <div class="fs-5 text-center mb-3">
+                      {{product.brand}} {{product.model}}
+                    </div>
+                    <div class="fs-6 text-muted">Available with</div>
+                    <ul class="text-muted mb-3">
+                      {% for spec in product.specs %}
+                      <li><small>{{spec}}</small></li>
+                      {% endfor %}
+                    </ul>
+                    <a href="{{product.url | relative_url}}"
+                      class="btn btn-primary text-uppercase fw-bold w-100">Configure</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            {% endif %}
+            {% endif %} {% endfor %}
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+  </div>
+  <!-- <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 mb-5">
     {% for product in site.products %} {% if product.type == 'product' and
     product.category == page.category %}
     <div class="col">
@@ -51,5 +148,5 @@ layout: default
       </div>
     </div>
     {% endif %} {% endfor %}
-  </div>
+  </div> -->
 </div>
