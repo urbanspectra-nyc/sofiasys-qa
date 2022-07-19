@@ -1,0 +1,8 @@
+title: Sofiasys
+description: Sofiasys
+plugins:
+  - jekyll-feed
+
+collections:
+  products:
+    output: true
