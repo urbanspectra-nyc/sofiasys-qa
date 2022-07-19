@@ -1,6 +1,8 @@
 ---
 layout: category
 category: macbooks
-title: Macbooks
 type: category
+# details
+title: Select new and used Macbooks
+img: /assets/img/mbooks.jpg
 ---

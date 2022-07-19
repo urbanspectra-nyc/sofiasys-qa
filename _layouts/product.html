@@ -3,9 +3,55 @@ layout: default
 ---
 
 <div class="container">
-  <div class="row">
-    <div class="col"><strong>{{page.brand}}</strong></div>
-    <div class="col"><h1>{{page.model}}</h1></div>
-    {{content}}
+  <div class="row py-4">
+    <div class="col">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="#">Home</a></li>
+          <li class="breadcrumb-item">
+            <a href="/products/{{page.category}}"
+              >{{page.category | capitalize}}</a
+            >
+          </li>
+          <li class="breadcrumb-item active" aria-current="page">
+            {{page.brand}} - {{page.model}}
+          </li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+  <div class="row mb-5">
+    <div class="col">
+      <div class="p-5 border shadow rounded">
+        <div class="row">
+          <div class="col">
+            <div class="fs-5 fw-bold text-muted">{{page.brand}}</div>
+            <div class="fs-2 mb-4">{{page.model}}</div>
+            <div class="fw-bold">Specifications</div>
+            <ul>
+              {% for spec in page.specs %}
+              <li>{{spec}}</li>
+              {% endfor %}
+            </ul>
+            <div class="py-3">
+              {% for tag in page.tags %}
+              <span class="badge bg-light text-dark">{{tag}}</span>
+              {% endfor %}
+            </div>
+            <div class="fs-2 mb-4 fw-bold">{{page.price}}</div>
+            <a class="btn btn-primary btn-lg text-uppercase fw-bold"
+              >Add to cart</a
+            >
+          </div>
+          <div class="col">
+            <img
+              src="{{page.img | relative_url}}"
+              alt="{{page.brand}} - {{page.model}}"
+              class="img-fluid"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </div>

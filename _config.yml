@@ -1,8 +1,12 @@
 title: Sofiasys
 description: Sofiasys
 plugins:
-  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-seo-tag
 
 collections:
   products:
     output: true
+
+sass:
+  sass_dir: assets/css

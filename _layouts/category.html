@@ -3,17 +3,47 @@ layout: default
 ---
 
 <div class="container">
-  <div class="row">
+  <div class="row py-5">
     <div class="col">
-      <h1>{{page.title}}</h1>
-      {% for product in site.products %} {% if product.type == 'product' and
-      product.category == page.category %}
-      <li>
-        <a href="{{product.url | relative_url}}"
-          >{{product.brand}} - {{product.model}}</a
-        >
-      </li>
-      {% endif %} {% endfor %}
+      <div class="h3 fw-bold text-muted">{{page.title}}</div>
     </div>
+  </div>
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 mb-5">
+    {% for product in site.products %} {% if product.type == 'product' and
+    product.category == page.category %}
+    <div class="col">
+      <div class="p-3 border rounded">
+        <div class="row">
+          <div class="col">
+            <img
+              src="{{product.img | relative_url}}"
+              alt="{{product.brand}} - {{product.model}}"
+              class="img-fluid mb-3"
+            />
+          </div>
+        </div>
+        <div class="row">
+          <div class="col">
+            <div class="fs-6 text-center text-muted">From</div>
+            <div class="fs-2 text-center fw-bold">{{product.price}}</div>
+            <div class="fs-5 text-center mb-3">
+              {{product.brand}} {{product.model}}
+            </div>
+            <div class="fs-6 text-muted">Available with</div>
+            <ul class="text-muted mb-3">
+              {% for spec in product.specs %}
+              <li><small>{{spec}}</small></li>
+              {% endfor %}
+            </ul>
+            <a
+              href="{{product.url | relative_url}}"
+              class="btn btn-primary text-uppercase fw-bold w-100"
+              >Configure</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+    {% endif %} {% endfor %}
   </div>
 </div>
