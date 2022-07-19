@@ -3,7 +3,19 @@ layout: default
 ---
 
 <div class="container">
-  <div class="row py-5">
+  <div class="row py-4">
+    <div class="col">
+      <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          <li class="breadcrumb-item"><a href="/">Home</a></li>
+          <li class="breadcrumb-item active" aria-current="page">
+            Products
+          </li>
+        </ol>
+      </nav>
+    </div>
+  </div>
+  <div class="row mb-5">
     <div class="col h5 fw-bold text-muted">Choose a product</div>
   </div>
   <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 mb-5">
@@ -12,24 +24,18 @@ layout: default
       <div class="p-4 border rounded h-100">
         <div class="row mb-4">
           <div class="col text-center">
-            <img
-              src="{{category.img | relative_url}}"
-              class="img-fluid category-img"
-            />
+            <img src="{{category.img | relative_url}}" class="img-fluid category-img" />
           </div>
         </div>
         <div class="row mb-4">
           <div class="col">
-            <div class="h2 fw-bold text-center">{{category.title}}</div>
+            <div class="h3 fw-bold text-center">{{category.title}}</div>
           </div>
         </div>
         <div class="row">
           <div class="col">
-            <a
-              href="{{category.url | relative_url}}"
-              class="btn btn-primary btn-lg w-100 fw-bold text-uppercase"
-              >Browse</a
-            >
+            <a href="{{category.url | relative_url}}"
+              class="btn btn-primary btn-lg w-100 fw-bold text-uppercase">Browse</a>
           </div>
         </div>
       </div>

@@ -7,11 +7,10 @@ layout: default
     <div class="col">
       <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="#">Home</a></li>
+          <li class="breadcrumb-item"><a href="/">Home</a></li>
+          <li class="breadcrumb-item"><a href="/products">Products</a></li>
           <li class="breadcrumb-item">
-            <a href="/products/{{page.category}}"
-              >{{page.category | capitalize}}</a
-            >
+            <a href="{{ '/products/' | append: page.category | relative_url }}">{{page.category | capitalize}}</a>
           </li>
           <li class="breadcrumb-item active" aria-current="page">
             {{page.brand}} - {{page.model}}
@@ -22,7 +21,7 @@ layout: default
   </div>
   <div class="row mb-5">
     <div class="col">
-      <div class="p-5 border shadow rounded">
+      <div class="p-5 border rounded">
         <div class="row">
           <div class="col">
             <div class="fs-5 fw-bold text-muted">{{page.brand}}</div>
@@ -39,16 +38,10 @@ layout: default
               {% endfor %}
             </div>
             <div class="fs-2 mb-4 fw-bold">{{page.price}}</div>
-            <a class="btn btn-primary btn-lg text-uppercase fw-bold"
-              >Add to cart</a
-            >
+            <a class="btn btn-primary btn-lg text-uppercase fw-bold">Add to cart</a>
           </div>
-          <div class="col">
-            <img
-              src="{{page.img | relative_url}}"
-              alt="{{page.brand}} - {{page.model}}"
-              class="img-fluid"
-            />
+          <div class="col text-center">
+            <img src="{{page.img | relative_url}}" alt="{{page.brand}} - {{page.model}}" class="img-fluid" />
           </div>
         </div>
       </div>
