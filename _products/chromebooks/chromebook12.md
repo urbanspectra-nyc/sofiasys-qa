@@ -1,11 +1,12 @@
 ---
 layout: product
-brand: Apple
-model: MacBook Pro (Retina, Touch Bar, 15-inch, Mid 2018)
-category: macbooks
+brand: Google
+model: Chromebook Pixel Core i5-3427U 1.8 GHz 32GB SSD - 4GB
+category: chromebooks
 type: product
-price: $1,469
-img: assets/img/mbookpro13.jpg
+price: $177.48
+original-price: $679.00
+img: assets/img/chromebooks.jpg
 specs:
     - 32GB memory
     - 512GB SSD
@@ -14,5 +15,6 @@ tags:
     - Space Gray
     - Used
     - 15 inch
+    - google
 ---
 Awesome description goes here

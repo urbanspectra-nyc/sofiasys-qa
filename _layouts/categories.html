@@ -16,29 +16,12 @@ layout: default
     </div>
   </div>
   <div class="row mb-2 py-4">
-    <div class="col h3 fw-bold text-muted">Choose a product</div>
+    <div class="col fs-5 fw-bold">Choose a product</div>
   </div>
-  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 mb-5 g-5">
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-3">
     {% for category in site.products %} {% if category.type == 'category' %}
     <div class="col">
-      <div class="p-4 border rounded h-100 bg-white">
-        <div class="row mb-4">
-          <div class="col text-center">
-            <img src="{{category.img | relative_url}}" class="img-fluid category-img" />
-          </div>
-        </div>
-        <div class="row mb-4">
-          <div class="col">
-            <div class="h3 fw-bold text-center">{{category.title}}</div>
-          </div>
-        </div>
-        <div class="row">
-          <div class="col">
-            <a href="{{category.url | relative_url}}"
-              class="btn btn-primary btn-lg w-100 fw-bold text-uppercase">Browse</a>
-          </div>
-        </div>
-      </div>
+      {% include category-card.html category=category%}
     </div>
     {% endif %} {% endfor %}
   </div>

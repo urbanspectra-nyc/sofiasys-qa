@@ -1,12 +1,12 @@
 ---
 layout: category
-category: macbooks
+category: chromebooks
 type: category
 # details
-title: MacBooks
-img: /assets/img/mbooks.jpg
+title: Chromebooks
+img: /assets/img/chromebooks.jpg
 filters:
-    - 13 inch
-    - 15 inch
+    - google
+    - hp
 ---
 Select brand-new or used Macbooks for the lowest prices in town…

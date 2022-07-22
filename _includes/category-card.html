@@ -1,0 +1,14 @@
+<div class="p-3 border rounded-3 h-100 position-relative hover-feedback">
+    {% assign category = include.category %}
+    <div class="row mb-4">
+        <div class="col text-center">
+            <img src="{{category.img | relative_url}}" class="img-fluid category-img" style="max-height: 128px;" />
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <div class="fs-5 fw-bold text-center">{{category.title}}</div>
+            <a href="{{category.url | relative_url}}" class="stretched-link"></a>
+        </div>
+    </div>
+</div>

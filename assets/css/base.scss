@@ -8,3 +8,25 @@
 ol.breadcrumb{
   margin-bottom: 0 !important;
 }
+
+.breadcrumb-item > a{
+  color: black;
+}
+
+.hover-feedback:hover{
+  box-shadow: 0 .5rem 1rem rgba(0,0,0,.15)!important;
+  cursor: pointer;
+}
+
+button.nav-link{
+  color: black;
+}
+
+button.nav-link:hover{
+  color: gray;
+}
+
+button.nav-link.active{
+  color: white;
+  background-color: black !important;
+}
