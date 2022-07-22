@@ -10,7 +10,9 @@ layout: default
           <li class="breadcrumb-item"><a href="/">Home</a></li>
           <li class="breadcrumb-item"><a href="/products">Products</a></li>
           <li class="breadcrumb-item">
-            <a href="{{ '/products/' | append: page.category | relative_url }}">{{page.category | capitalize}}</a>
+            <a href="{{ '/products/' | append: page.category | relative_url }}"
+              >{{page.category | capitalize}}</a
+            >
           </li>
           <li class="breadcrumb-item active" aria-current="page">
             {{page.brand}} - {{page.model}}
@@ -21,8 +23,53 @@ layout: default
   </div>
   <div class="row g-3 d-flex align-items-center py-5">
     <div class="col-12 col-lg-4 text-center">
-      <img src="{{page.img | relative_url}}" alt="{{page.brand}} - {{page.model}}" class="img-fluid"
-        style="max-height: 256px;" />
+      {% if page.gallery %}
+      <div
+        id="galleryCarousel"
+        class="carousel carousel-dark slide"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-inner">
+          {% for img in page.gallery %}
+          <div
+            class="carousel-item {% if forloop.index == 1 %}active {% endif %}"
+          >
+            <img
+              src="{{img | relative_url}}"
+              alt="{{page.brand}} - {{page.model}}"
+              class="img-fluid"
+              style="max-height: 256px"
+            />
+          </div>
+          {% endfor %}
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#galleryCarousel"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#galleryCarousel"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      {% else %}
+      <img
+        src="{{page.img | relative_url}}"
+        alt="{{page.brand}} - {{page.model}}"
+        class="img-fluid"
+        style="max-height: 256px"
+      />
+      {% endif %}
     </div>
     <div class="col-12 col-lg-8">
       <div class="fs-6 fw-bold text-muted">{{page.brand}}</div>
@@ -32,6 +79,8 @@ layout: default
         <span class="badge bg-light border text-dark">{{tag}}</span>
         {% endfor %}
       </div>
+      <small class="fw-bold text-muted">Year of manufacture</small>
+      <div class="fs-6 mb-2">{{page.yom}}</div>
       <small class="fw-bold text-muted">Specifications</small>
       <ul>
         {% for spec in page.specs %}
@@ -39,10 +88,15 @@ layout: default
         {% endfor %}
       </ul>
       <div class="mb-4">
-        <span class="text-decoration-line-through text-danger">{{page.original-price}}</span>
+        <span class="text-decoration-line-through text-danger"
+          >{{page.original-price}}</span
+        >
         <span class="fs-3 fw-bold">{{page.price}}</span>
       </div>
       <a class="btn btn-dark">Add to cart</a>
     </div>
+  </div>
+  <div class="row">
+    <div class="col">{{content}}</div>
   </div>
 </div>
