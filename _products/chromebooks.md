@@ -6,8 +6,6 @@ type: category
 title: Chromebooks
 img: /assets/img/chromebooks.jpg
 filters:
-    - Google
-    - Hp
-    - Asus
+    - Dell
 ---
 Select brand-new or used Macbooks for the lowest prices in town…

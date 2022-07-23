@@ -24,9 +24,9 @@
       <div class="fw-bold mb-2">{{product.model}}</div>
       <small class="text-muted">Starting from</small>
       <div class="text-danger fs-6 text-decoration-line-through">
-        {{product.original-price}}
+        {{site.currency}}{{product.original-price}}
       </div>
-      <div class="fs-4 fw-bold">{{product.price}}</div>
+      <div class="fs-4 fw-bold">{{site.currency}}{{product.price}}</div>
       <a href="{{product.url | relative_url}}" class="stretched-link"></a>
     </div>
   </div>
