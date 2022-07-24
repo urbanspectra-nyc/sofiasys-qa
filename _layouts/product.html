@@ -2,14 +2,14 @@
 layout: default
 ---
 <div class="container">
-  <div class="row py-4">
+  <div class="row py-4 border-bottom">
     <div class="col">
       <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
-          <li class="breadcrumb-item"><a href="/">Home</a></li>
-          <li class="breadcrumb-item"><a href="/products">Products</a></li>
+          <li class="breadcrumb-item"><a href="{{ '/' | relative_url}}">Home</a></li>
+          <li class="breadcrumb-item"><a href="{{'/products' | relative_url }}">Products</a></li>
           <li class="breadcrumb-item">
-            <a href="{{ '/products/' | append: page.category | relative_url }}">{{page.category}}</a>
+            <a href="{{ '/products/' | append: page.category | downcase | relative_url }}">{{page.category}}</a>
           </li>
           <li class="breadcrumb-item active" aria-current="page">
             {{page.brand}} - {{page.model}}

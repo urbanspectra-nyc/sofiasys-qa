@@ -8,9 +8,9 @@ layout: default
       <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
           <li class="breadcrumb-item">
-            <a href="{{ '/' | relative_path }}">Home</a>
+            <a href="{{ '/' | relative_url }}">Home</a>
           </li>
-          <li class="breadcrumb-item"><a href="/products">Products</a></li>
+          <li class="breadcrumb-item"><a href="{{'/products' | relative_url}}">Products</a></li>
           <li class="breadcrumb-item active" aria-current="page">
             {{page.title}}
           </li>
