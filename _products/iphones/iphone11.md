@@ -5,89 +5,45 @@ date: 2022-07-24
 category: iPhones
 # Customizable details
 brand: Apple
-model: iPhone 11 64GB
+model: iPhone 11 64GB (Unlocked)
 yom: 2015
-price: 52.00
-original-price: 475.00
+price: 279.00
+original-price: 699.00
 img: assets/img/iphones/iphone11.png
-condition: 3
+condition: 4
 special-remarks:
   - Shell- Light but visible scratches
   - Screen- May have micro scratches that are invisible when the device is on
 seller: en-Tech
 specifications:
   - Black
-  - 11.6 inches
-  - 16 GB storage
-  - 4 GB SSD memory
-  - 2.16 Hz 2 core Intel processor
-  - Intel HD 2000 graphics
-  - Chrome OS
+  - A13 bionic chip
+  - 64 GB storage
+  - 4 GB RAM
+  - Dual 12 MP Wide and Ultra Wide, Wide-angle:ƒ/1.8 aperture, Ultra-wide:ƒ/2.4 aperture
+  - Built-in rechargeable lithium-ion battery
+  - 6.84 oz
 features:
-  - Free 7 day shipping
+  - As low as $24/mo
   - 12 months warranty
   - Verified refurbished
 tags:
   - Black
   - 11
+  - 64 GB
 ---
 
-# Dell Chromebook 11 3120 11.6" Celeron N2840 2.16GHz - SSD 16GB - RAM 4GB - QWERTY
+### PERFORMANCE
 
-Our partners are electronics experts who test and verify that each product is 100% functional before it leaves the factory. This is the reason you benefit from a minimum 1-Year warranty with the purchase of a refurbished device at Back Market.
+Dubbed one of the most affordable iPhones to ever be released, the iPhone 11 has nearly everything you need packaged in a sleek design and at a fraction of the price. The performance in this model is comparable to the Pro and Pro Max models, backed by the freaky fast A13 Bionic chip. Jump back and forth between apps and functions with ease, stream videos effortlessly and sharpen your gaming skills with the all-new Apple Arcade. This model is equipped with a major software update that includes a fully revamped Photos app and a dark viewing mode. All of this can be used and enjoyed on a powerful all-day battery charge.
 
-### Dell Chromebook 11 3120 Celeron N2840 2.16 GHz 16GB SSD - 4GB
+### CAMERA
 
-Color : Black
+This phone makes it pretty difficult to take a bad photo, no matter what your photography experience is. The iPhone 11 features a brand new 120-degree ultra-wide-angle lens to take cinematic pictures with a single finger tap. This is in included in the new ultra-wide 12-MP camera lens, the same main camera as the iPhone Pro and iPhone Pro Max models. Take stunning, studio-level portraits in the popular Portrait mode with the TrueDepth feature, take your pick of the many shots captured in HDR and burst modes, forget about shaky pics and video with optical image stabilization and shoot clean 4K video all on the iPhone 11.
 
-Screen size (inches) : 11.6
+### WHAT'S INCLUDED
 
-Storage : 16 GB
-
-Memory : 4 GB
-
-Model : Chromebook 11 3120
-
-Processor speed : 2.16 GHz
-
-Processor brand : Intel
-
-Processor Core : 2
-
-Graphic Card Type : Intel HD Graphics 2000
-
-OS : Chrome OS
-
-Storage Type : SSD
-
-Touchscreen : No
-
-Bluetooth : Yes
-
-Webcam : Yes
-
-Microphone : Yes
-
-Series : Chromebook
-
-Processor : Celeron N2840
-
-Release Year : 2015
-
-SSD Storage Capacity (GB) : 16
-
-Keyboard type and language : QWERTY - English (US)
-
-IPS : No
-
-Linux Compatible : No
-
-Android Compatible : No
-
-Stylus : No
-
-Main color : Black
-
-Brand : Dell
-
-Weight : 48 oz
+- 30-point quality inspection
+- Easy 30-day returns
+- Charger included
+- No contracts or strings attached

@@ -107,10 +107,11 @@ layout: default
     </div>
     {% endfor %}
   </div>
-  <hr />
   <div class="row">
     <div class="col">
-      <div class="fs-3">Description</div>
+      <div class="p-3 bg-dark rounded mb-4">
+        <div class="fs-5 fw-bold text-light">Description</div>
+      </div>
       {{content | markdownify}}
     </div>
   </div>

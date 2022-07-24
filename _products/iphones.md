@@ -6,9 +6,8 @@ type: category
 title: iPhones
 img: /assets/img/iphones.png
 filters:
-  - 11
-  - 12
-  - 13
+  - 64 GB
+  - 128 GB
 ---
 
 Select brand-new or used Macbooks for the lowest prices in town…
