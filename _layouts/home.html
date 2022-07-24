@@ -2,17 +2,14 @@
 layout: default
 ---
 <div class="container">
-    <div class="row py-5">
+    <div class="row my-5">
         <div class="col">
-            <div class="display-1">
-                Welcome to Sofiasys
+            <div class="bg-light shadow rounded p-5">
+                <h1 class="text-dark">Welcome to Sofiasys</h1>
+                <div class="text-secondary mb-3">A collection of refurbished hardware</div>
+                <a href="{{ 'products' | relative_url }}" class="btn btn-primary fw-bold">Browse
+                    Products</a>
             </div>
-        </div>
-    </div>
-    <div class="row">
-        <div class="col">
-            <a href="{{ 'products' | relative_url }}" class=" btn btn-outline-dark fw-bold">Browse
-                Products</a>
         </div>
     </div>
 </div>
