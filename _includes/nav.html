@@ -4,8 +4,10 @@
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <ul class="navbar-nav me-auto mb-2 mb-lg-0">
                 {% for category in site.products %} {% if category.type == 'category' %}
+                {% if category.show_on_navbar == true %}
                 <li class="nav-item"><a href="{{category.url | relative_url}}" class="nav-link">{{category.title}}</a>
                 </li>
+                {% endif %}
                 {% endif %} {% endfor %}
             </ul>
         </div>
