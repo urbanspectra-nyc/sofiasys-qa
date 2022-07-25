@@ -1,10 +1,10 @@
 ---
 layout: category
-category: iPhones
+category: iPads
 type: category
 # details
-title: iPhones
-img: /assets/img/iphones.png
+title: iPads
+img: /assets/img/ipads.png
 filters:
   - 64 GB
   - 128 GB

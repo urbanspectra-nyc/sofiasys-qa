@@ -4,10 +4,8 @@ category: Tablets
 type: category
 # details
 title: Tablets
-img: /assets/img/iphones.png
+img: /assets/img/tablets.jpg
 filters:
-  - 64 GB
-  - 128 GB
+  - 9.7 inch
+  - 12 inch
 ---
-
-Select brand-new or used tablets for the lowest prices in town…

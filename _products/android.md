@@ -1,10 +1,10 @@
 ---
 layout: category
-category: iPhones
+category: Android
 type: category
 # details
-title: iPhones
-img: /assets/img/iphones.png
+title: Android
+img: /assets/img/android.jpg
 filters:
   - 64 GB
   - 128 GB
