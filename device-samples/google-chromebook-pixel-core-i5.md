@@ -28,8 +28,6 @@ specifications:
     desc: 32GB
   - title: Release date
     desc: 2013
-  - title: 5G
-    desc: Yes
   - title: Processor
     desc: Core i5-3427U
   - title: Graphics card type
